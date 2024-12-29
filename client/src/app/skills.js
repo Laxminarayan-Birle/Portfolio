@@ -26,7 +26,7 @@ const Skills = () => {
   }, []);
 
   return (
-    <div className=" flex flex-col items-center my-20 mx-auto py-10 ">
+    <div  className="flex flex-col items-center my-20 mx-auto py-10 ">
       <h2 className="text-5xl font-sans font-thin mb-8">Skills</h2>
       <div className="flex gap-10 flex-row justify-center w-3/4">
         <div className='w-2/4'>

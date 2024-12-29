@@ -2,17 +2,13 @@
 'use client'
 import React ,{useState,useEffect} from 'react';
 import Image from 'next/image';
-import Head from 'next/head';
 import styles from'./styles/Home.module.css';
-import { faReact } from '@fortawesome/free-solid-svg-icons';
 import Skills from './skills';
-import { faGithub } from '@fortawesome/free-solid-svg-icons';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-// import { faGithub } from '@fortawesome/free-solid-svg-icons';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 const projects = [
   {
     title: 'myportfolio',
@@ -91,7 +87,7 @@ export default function Home() {
   return (
    <>
    <div className="bg-gradient-to-b from-pink-200 to-pink-400 min-h-screen flex flex-col items-center justify-center text-center">
-      <header className="absolute top-0 w-full p-5 flex gap-10 items-center text-sm text-gray-800">
+      <header className="fixed  top-0 w-full p-5 flex gap-10 items-center text-sm text-gray-800">
         <div className="text-xl font-semibold">
           &lt;Mohd /&gt;
         </div>
@@ -105,11 +101,12 @@ export default function Home() {
 
       <main className="flex flex-col items-center w-2/3">
         <h1 className="text-7xl font-sans font-thin text-white mb-4">Mohd Shahid Iqbal</h1>
-        <div className="overflow-hidden w-full">
-          <p className="marquee text-lg font-sans font-thin text-white  mb-8 whitespace-nowrap">
-            Passionate about changing the world with technology.
-          </p>
-        </div>
+        <div className="overflow-hidden w-full h-8 relative">
+    <p className="whitespace-nowrap animate-scroll text-lg font-sans font-thin text-white">
+      Passionate about changing the world with technology.
+    </p>
+</div>
+
         <div className="flex space-x-4 mb-8">
           <a href="https://github.com/Laxminarayan-Birle/RaceTask" target="_blank" rel="noopener noreferrer">
           <GitHubIcon/>
@@ -145,7 +142,7 @@ export default function Home() {
         />
       </div>
 
-      <div id="aboutme" className="text-left w-2/4">
+      <div id="aboutme" className="flex justify-center flex-col p-10 w-2/4">
       <h1 className="text-4xl text-center font-sans font-thin text-gray-800 mb-6">About Me</h1>
         <p className="text-lg font-sans font-thin text-gray-500 leading-relaxed mb-4">
           My name is Mohd Shahid Iqbal. I’m a post-graduate of 2020 from Jamia Hamdard University at New Delhi with a degree in Masters of
@@ -155,7 +152,7 @@ export default function Home() {
           open source projects.
         </p>
         <a href="https://drive.google.com/file/d/1PvGOBXBxGKhrUFPC3SsgOtbhlAqrD457/view?usp=drive_link " target='_blank'>
-        <button className="px-6 py-3 bg-pink-500 text-white font-medium rounded-md shadow-md hover:shadow-lg hover:bg-pink-600">
+        <button className="px-6 py-3 items-center text-black font-medium rounded-md border border-black  hover:shadow-lg hover:bg-black hover:text-white">
           Resume
         </button></a>
       </div>
@@ -169,7 +166,7 @@ export default function Home() {
       <div className="grid w-full p-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
         <div className="flex items-center flex-col gap-10">
           <div className="mr-4">
-            <Image src="/pacelogo.jpg" alt="Simpana Technology" width={200} height={100} />
+            <Image src="/images/simpana.png" alt="Simpana Technology" width={250} height={100} />
           </div>
           <div>
             <h3 className="text-xl  font-sans font-thin">React Developer</h3>
@@ -179,7 +176,7 @@ export default function Home() {
 
         <div className="flex items-center flex-col gap-10">
           <div className="mr-4">
-            <Image src="/pacelogo.jpg" alt="Vendify" width={200} height={100} />
+            <Image src="/images/vendify.png" alt="Vendify" width={250} height={100} />
           </div>
           <div>
             <h3 className="text-xl  font-sans font-thin">Senior Software Engineer</h3>
@@ -189,7 +186,7 @@ export default function Home() {
 
         <div className="flex items-center flex-col gap-10">
           <div className="mr-4">
-            <Image src="/pacelogo.jpg" alt="PACE" width={200} height={200} />
+            <Image src="/images/paceTrader.png" alt="PACE" width={250} height={200} />
           </div>
           <div>
             <h3 className="text-xl  font-sans font-thin">React Developer</h3>
@@ -306,7 +303,7 @@ export default function Home() {
   </div>
 </section>
 
-    <Skills/>
+    <Skills id="skills"/>
 
       <div className=" mx-auto py-16 text-center bg-gray-200">
         <h1 className="text-5xl font-sans font-thin mb-8">Get In Touch</h1>
@@ -323,7 +320,7 @@ export default function Home() {
           .
         </p>
         <p className=" font-bold">
-        &lt;/&gt; ❤️ by{' '}
+        &lt;/&gt; <FavoriteIcon/> by{' '} 
           <a
             href="#"
             className="text-blue-500 hover:underline"
@@ -331,7 +328,7 @@ export default function Home() {
             Mohd Shahid Iqbal
           </a>{' '}
           using{' '}
-          <faReact />
+          &lt;Next.js/&gt;
         </p>
       </div>
    </>
