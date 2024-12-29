@@ -1,0 +1,52 @@
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .sliderInner {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .sliderItem {
+    min-width: 100%;
+    height: 100%;
+  }
+  
+  .sliderImage {
+    width: 100%;
+    height: auto;
+  }
+  
+  .prevButton,
+  .nextButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .prevButton {
+    left: 10px;
+  }
+  
+  .nextButton {
+    right: 10px;
+  }
+  .cardname{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+  }
+  .projectCard{
+    flex: 0 0 auto;
+        width: 50%;
+    padding: 40px;
+  }
